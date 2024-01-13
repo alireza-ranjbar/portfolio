@@ -6,11 +6,14 @@
 -->
 <html>
 	<head>
-		<title>Aerial by HTML5 UP</title>
+		<title>Alireza-Ranjbar Portfolio Page</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+		<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
@@ -20,23 +23,27 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Alireza Ranjbar</h1>
+						<h1 class="text-light">Alireza Ranjbar</h1>
 						<p>&nbsp;&bull;&nbsp; WEB DEVELOPER &nbsp;&bull;&nbsp;</p>
-						<p style="color:red">In preparing ...</p>
-						<nav>
+						<button id="projects-btn" class="btn btn-outline-light mt-4">My Projects</button>
+						<nav id="icons">
 							<ul>
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.linkedin.com/in/alireza-ranjbar-bb85542aa" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/profile.php?id=61555053546978" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://github.com/alireza-ranjbar" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="https://www.alirezaranjbardev@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
 						</nav>
+						<div id="projects">
+							<ul>
+								<li>Project 1</li>
+							</ul>
+						</div>
 					</header>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+						<span class="copyright text-light">&copy; <a href="https://github.com/alireza-ranjbar" class="text-light">Alireza-Ranjbar</a></span>
 					</footer>
 
 			</div>
@@ -45,6 +52,13 @@
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			
+			$('#projects').hide();
+			$('#projects-btn').click(function(){
+				$(this).slideUp();
+				$('#icons').slideUp();
+				$('#projects').slideDown();
+			});
 		</script>
 	</body>
 </html>

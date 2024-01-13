@@ -99,7 +99,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #fff;
+		color: #fff !important;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 15pt;
 		font-weight: 300 !important;
@@ -127,6 +127,7 @@ input, select, textarea {
 	.icon {
 		text-decoration: none;
 		position: relative;
+		color: #fff;
 	}
 
 		.icon:before {
