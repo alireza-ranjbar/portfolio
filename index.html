@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Alireza-Ranjbar Portfolio Page</title>
@@ -13,7 +8,8 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>	</head>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>	
+	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="bg"></div>
@@ -24,21 +20,101 @@
 					<header id="header">
 						<h1 class="text-light">Alireza Ranjbar</h1>
 						<p>&nbsp;&bull;&nbsp; WEB DEVELOPER &nbsp;&bull;&nbsp;</p>
-						<button id="projects-btn" class="btn btn-outline-light mt-4">My Projects</button>
+						<button id="mainBtn" class="btn btn-outline-light mt-3">Go to Projects &rarr;</button>
 						<nav id="icons">
 							<ul>
-								<li><a href="https://www.linkedin.com/in/alireza-ranjbar-bb85542aa" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.facebook.com/profile.php?id=61555053546978" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://github.com/alireza-ranjbar" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="https://www.alirezaranjbardev@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.linkedin.com/in/alireza-ranjbar-bb85542aa" target="_blank" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+								<li><a href="https://www.facebook.com/profile.php?id=61555053546978" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://github.com/alireza-ranjbar" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li id="contact-btn"><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://wa.me/+989109543651" target="_blank" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
 							</ul>
 						</nav>
-						<div id="projects">
-							<ul>
-								<li>Project 1</li>
-							</ul>
+
+
+						<div id="contact-form" class="row text-dark justify-content-center mt-3">
+							<div class="card col-8 col-md-6 d-flex">
+								<div class="card-header">
+									<p class="fs-6">Please leave your email and message here. I'll answer you typically within 24 hrs.</p>
+								</div>
+								<div class="card-body">
+									<form action="https://formspree.io/f/xpzvwyzb" method="POST">
+										<div class="form-floating mb-3">
+											<input type="text" style="height: 60px;" name="name" class="form-control text-dark" id="nameInput" placeholder="Your full name">
+											<label for="nameInput">Your full name</label>
+										</div>										
+										<div class="form-floating mb-3">
+											<input type="email" name="email" class="form-control text-dark" id="emailInput" placeholder="name@example.com">
+											<label for="emailInput">Your email</label>
+										</div>
+										<div class="form-floating mb-3">
+											<textarea name="message" style="height: 80px;" class="form-control text-dark" placeholder="Leave a comment here" id="messageInput"></textarea>
+											<label for="messageInput">Your message</label>
+										  </div>
+										<div>
+											<button id="submitBtn" style="float: left;" type="submit" class="btn btn-dark">Submit</button>
+											<div class="invalid-feedback fs-6">
+												Ooops: Please fill in all fields before submitting.
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
 						</div>
+
+						<div class="row justify-content-center">
+						<div id="projects" class="carousel slide mt-4 col-xs-10 col-md-8">
+							<div class="carousel-indicators">
+							  <button type="button" data-bs-target="#projects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							  <button type="button" data-bs-target="#projects" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							  <button type="button" data-bs-target="#projects" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							</div>
+							<div class="carousel-inner">
+							  <div class="carousel-item active">
+								<div class="card text-bg-dark d-flex">
+									<div class="card-header d-flex justify-content-center align-items-center">
+										<h5 class="card-title text-secondary">Ecommerce website developed via Laravel</h5>
+										<a href="https://github.com/alireza-ranjbar/E-commerce" target="_blank" class="btn btn-outline-secondary ms-2">Source code</a>
+									</div>
+									<img src="./assets/css/images/ecommerce.png" class="card-img" alt="...">
+								</div>
+							  </div>
+							  
+							  <div class="carousel-item">
+								<div class="card text-bg-dark d-flex">
+									<div class="card-header d-flex justify-content-center align-items-center">
+										<h5 class="card-title text-secondary">Room renting web app developed via Laravel and Vue.js</h5>
+										<a href="https://github.com/alireza-ranjbar/Room-rent-application" target="_blank" class="btn btn-outline-secondary ms-2">Source code</a>
+									</div>
+									<img src="./assets/css/images/rent.png" class="card-img" alt="...">
+								</div>
+							  </div>
+
+							  <div class="carousel-item">
+								<div class="card text-bg-dark d-flex">
+									<div class="card-header d-flex justify-content-center align-items-center">
+										<h5 class="card-title text-secondary">UX design for a tour management web app</h5>
+										<a href="./assets/css/images/tour-full.jpg" target="_blank" class="btn btn-outline-secondary ms-2">Full size</a>
+									</div>
+									<img src="./assets/css/images/tour.jpg" class="card-img" alt="...">
+								</div>
+							  </div>
+
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#projects" data-bs-slide="prev">
+							  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							  <span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#projects" data-bs-slide="next">
+							  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							  <span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						</div>
+
 					</header>
+
+
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -46,18 +122,62 @@
 					</footer>
 
 			</div>
+
 		</div>
 		<script>
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
-			
+
+			//show projects carousel
+			let mainBtn = false;
 			$('#projects').hide();
-			$('#projects-btn').click(function(){
-				$(this).slideUp();
-				$('#icons').slideUp();
-				$('#projects').slideDown();
+			$('#mainBtn').click(function(){
+				if(mainBtn){
+					mainBtn = false;
+					$(this).html('Go to Projects &rarr;');
+					$('#icons').show();
+					$('#projects').hide();
+					$('#contact-form').hide();
+				}else{
+					mainBtn = true;
+					$(this).html('&larr; Go back');
+					$('#icons').hide();
+					$('#projects').show();
+				}
 			});
+
+			//show contact form
+			$('#contact-form').hide();
+			$('#contact-btn').click(function(){
+				mainBtn = true;
+				$('#mainBtn').html('&larr; Go back');
+				$('#icons').hide();
+				$('#contact-form').show();
+			});
+
+			//form validation and submission
+			$('#submitBtn').click(function(event){
+				$('div.invalid-feedback').hide();
+				let allInputsFilled = true;
+				event.preventDefault();
+				$('#contact-form .form-control').each(function(){
+					if($(this).val().trim() === ''){
+						$(this).addClass('is-invalid');
+						$('div.invalid-feedback').show();
+						allInputsFilled = false;
+					}else{
+						$(this).removeClass('is-invalid');
+					}
+				});
+
+				if(allInputsFilled){
+					$('div.invalid-feedback').hide();
+					$('#contact-form form').submit();
+				}
+				
+			});
+			
 		</script>
 	</body>
 </html>
